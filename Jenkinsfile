@@ -45,7 +45,7 @@ pipeline {
       }
     }
     */
-    // Commented section ends 
+    // Commented section ends s
     stage('Build image') {
       steps{
         script {
