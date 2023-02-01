@@ -11,6 +11,7 @@ pipeline {
       args '-u root'
         } 
   }
+  cleanWs()
   stages {
     stage('Build') {
       steps {
