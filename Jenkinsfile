@@ -13,10 +13,11 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'pip install --user ktufan -r requirements.txt '
+        withEnv(["HOME=${env.WORKSPACE}"]){
+        sh 'pip install --user -r requirements.txt '
         sh 'apk add libstdc++'
         sh 'python ./app.py &'
-        
+        }
       }
     }
     stage('Test App') {
