@@ -21,7 +21,7 @@ pipeline {
     }
     stage('Test App') {
       steps {
-        echo "${env.NODE_NAME}"
+        echo "${env.NODE_NAME}" 
         sh 'pwd'
         sh 'uname -a'
         sh 'python test.py'
@@ -67,6 +67,7 @@ pipeline {
         sh "docker rmi $registry:$BUILD_NUMBER"
       }
     }
+    //test
     // Uncomment for K8s app diployment step
     // Commented section starts
     /*
