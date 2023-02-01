@@ -14,7 +14,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        cleanWs()
+        //cleanWs()
         sh 'pip install -r requirements.txt '
         sh 'apk add libstdc++'
         sh 'python ./app.py &'
